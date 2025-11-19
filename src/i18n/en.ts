@@ -91,11 +91,21 @@ export default {
   },
 
   contact: {
-    title: "Contact",
-    desc:
-      "Feel free to reach out for collaboration, freelance opportunities, or any professional discussions.",
+  title: "Contact",
+  desc: "If you have any questions, feel free to send me a message!",
+
+  form: {
+    fullname: "Full Name",
+    fullname_placeholder: "Enter your name...",
     email: "Email",
-    github: "GitHub",
-    facebook: "Facebook",
+    email_placeholder: "Enter your email...",
+    message: "Message",
+    message_placeholder: "Enter your message...",
+    submit: "Send Message",
   },
+
+  info_title: "Contact Information",
+  location: "Ho Chi Minh City"
+}
+,
 };

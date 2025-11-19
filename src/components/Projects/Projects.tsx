@@ -14,17 +14,30 @@ export default function Projects() {
         </h2>
 
         {/* GRID */}
-        <div className="max-w-[60%] mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-14 px-6">
+        <div className="max-w-[60%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 px-6">
+
 
           {t.projects.list.map((p: any, i: number) => (
             <a
               key={i}
               href={p.link}
               target="_blank"
-              className="group bg-white/5 hover:bg-white/10 transition p-6 block"
+              className="
+                group 
+                bg-white/5 
+                hover:bg-white/10 
+                transition 
+                p-6 
+                block 
+                rounded-2xl 
+                border border-white/10
+                hover:border-white/20
+                backdrop-blur-md
+                shadow-lg hover:shadow-xl
+              "
             >
               {/* IMAGE */}
-              <div className="overflow-hidden mb-5">
+              <div className="overflow-hidden mb-5 rounded-xl">
                 <img
                   src={p.image}
                   className="w-full h-52 object-cover group-hover:scale-105 transition duration-500"
@@ -46,8 +59,19 @@ export default function Projects() {
                 {p.tech.map((tech: string) => (
                   <span
                     key={tech}
-                    className="px-4 py-1.5 text-sm bg-white/10 text-white/80 tracking-wide
-                               group-hover:bg-white/20 transition"
+                    className="
+                      px-4 
+                      py-1.5 
+                      text-sm 
+                      bg-white/10 
+                      text-white/80 
+                      tracking-wide
+                      rounded-lg 
+                      border border-white/20
+                      group-hover:bg-white/20 
+                      group-hover:border-white/40
+                      transition
+                    "
                   >
                     {tech}
                   </span>

@@ -97,11 +97,20 @@ Hiện tại, tôi đang mở rộng kỹ năng bằng việc xây dựng trợ 
   },
 
   contact: {
-    title: "Liên hệ",
-    desc:
-      "Hãy liên hệ nếu bạn muốn hợp tác, làm freelance hoặc trao đổi công việc.",
+  title: "Liên hệ",
+  desc: "Nếu bạn có bất kỳ câu hỏi nào, hãy gửi tin nhắn cho tôi!",
+
+  form: {
+    fullname: "Họ tên",
+    fullname_placeholder: "Nhập họ tên...",
     email: "Email",
-    github: "GitHub",
-    facebook: "Facebook",
+    email_placeholder: "Nhập email...",
+    message: "Nội dung",
+    message_placeholder: "Nhập tin nhắn...",
+    submit: "Gửi",
   },
+
+  info_title: "Thông tin liên hệ",
+  location: "TP. Hồ Chí Minh"
+},
 };

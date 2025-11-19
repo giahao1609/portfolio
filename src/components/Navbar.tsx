@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, Menu, X } from "lucide-react";
 import { useLangStore } from "../i18n";
 
 export default function Navbar() {
   const { t, lang, switchLang } = useLangStore();
   const [dark, setDark] = useState(false);
+  const [open, setOpen] = useState(false);
 
+  // Load theme
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
@@ -36,13 +38,13 @@ export default function Navbar() {
           <div className="w-9 h-9 rounded-full bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold shadow">
             HG
           </div>
-          <span className="font-semibold text-white">
+          <span className="font-semibold text-white text-lg">
             {t.hero.name}
           </span>
         </div>
 
-        {/* MENU */}
-        <nav className="hidden md:flex gap-8 text-white/80 text-sm">
+        {/* DESKTOP MENU */}
+        <nav className="hidden md:flex gap-10 text-white/90 text-base font-medium">
           <a href="#home" className="hover:text-white">{t.navbar.home}</a>
           <a href="#projects" className="hover:text-white">{t.navbar.projects}</a>
           <a href="#skills" className="hover:text-white">{t.navbar.skills}</a>
@@ -51,9 +53,7 @@ export default function Navbar() {
         </nav>
 
         {/* RIGHT */}
-        <div className="flex items-center gap-3">
-
-          {/* LANGUAGE SWITCH */}
+        <div className="hidden md:flex items-center gap-3">
           <button
             onClick={switchLang}
             className="px-3 py-1 border border-white/20 rounded-lg text-white/80 hover:bg-white/10 transition"
@@ -61,17 +61,51 @@ export default function Navbar() {
             {lang.toUpperCase()}
           </button>
 
-          {/* DARK MODE */}
           <button
             onClick={toggleTheme}
             className="p-2 border border-white/20 rounded-lg text-yellow-400 hover:bg-white/10 transition"
           >
             {dark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
-
         </div>
 
+        {/* MOBILE MENU BUTTON */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-white p-2"
+        >
+          {open ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
+
+      {/* MOBILE MENU DROPDOWN */}
+      {open && (
+        <div className="md:hidden bg-[#050e1c]/95 backdrop-blur-xl border-t border-white/10 py-5 px-6 space-y-4">
+
+          <a onClick={() => setOpen(false)} href="#home" className="block text-white/90 text-lg">{t.navbar.home}</a>
+          <a onClick={() => setOpen(false)} href="#projects" className="block text-white/90 text-lg">{t.navbar.projects}</a>
+          <a onClick={() => setOpen(false)} href="#skills" className="block text-white/90 text-lg">{t.navbar.skills}</a>
+          <a onClick={() => setOpen(false)} href="#experience" className="block text-white/90 text-lg">{t.navbar.experience}</a>
+          <a onClick={() => setOpen(false)} href="#contact" className="block text-white/90 text-lg">{t.navbar.contact}</a>
+
+          <div className="flex items-center gap-4 pt-4 border-t border-white/10">
+            <button
+              onClick={switchLang}
+              className="px-3 py-1 border border-white/20 rounded-lg text-white/80 hover:bg-white/10 transition"
+            >
+              {lang.toUpperCase()}
+            </button>
+
+            <button
+              onClick={toggleTheme}
+              className="p-2 border border-white/20 rounded-lg text-yellow-400 hover:bg-white/10 transition"
+            >
+              {dark ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+          </div>
+
+        </div>
+      )}
     </header>
   );
 }

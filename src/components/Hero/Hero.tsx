@@ -9,7 +9,13 @@ export default function Hero() {
       id="home"
       className="py-36 px-6 md:px-16 bg-linear-to-br from-[#071123] via-[#0b1b33] to-[#081423] text-white"
     >
-      <div className="max-w-[60%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+      <div className="
+        max-w-6xl 
+        mx-auto 
+        grid grid-cols-1 md:grid-cols-2 
+        gap-20 
+        items-center
+      ">
 
         {/* LEFT */}
         <MotionFade>
@@ -22,8 +28,13 @@ export default function Hero() {
               {t.hero.title}
             </h2>
 
-            <p className="text-white/80 text-xl leading-relaxed mb-12 max-w-2xl">
+            <p className="text-white/80 text-xl leading-relaxed mb-6">
               {t.hero.shortDescription}
+            </p>
+
+            {/* DESCRIPTION LONG */}
+            <p className="text-white/70 text-lg leading-relaxed mb-12">
+              {t.hero.description}
             </p>
 
             {/* BUTTONS */}
@@ -53,7 +64,12 @@ export default function Hero() {
 
               <img
                 src="/profile.jpg"
-                className="relative w-[400px] h-[520px] object-cover rounded-3xl shadow-2xl"
+                className="
+                  relative 
+                  w-[260px] h-[340px]
+                  md:w-[300px] md:h-[400px]
+                  object-cover rounded-3xl shadow-2xl
+                "
                 alt="profile"
               />
             </div>
