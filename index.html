@@ -4,8 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <script type="module" crossorigin src="/portfolio/assets/index-CCFY-pX-.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-6RYZjYcc.css">
+
+    <script>
+      const theme = localStorage.getItem("theme");
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+    <script type="module" crossorigin src="/portfolio/assets/index-jsCQzHdP.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-3Zwrld77.css">
   </head>
   <body>
     <div id="root"></div>
