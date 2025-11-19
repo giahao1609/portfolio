@@ -63,7 +63,7 @@ export default function Hero() {
               <div className="absolute -inset-10 bg-purple-600/30 blur-[100px] rounded-3xl"></div>
 
               <img
-                src="/profile.jpg"
+                src="./profile.jpg"
                 className="
                   relative 
                   w-[260px] h-[340px]
