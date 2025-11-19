@@ -9,11 +9,24 @@ export default function Skills() {
   ) as (keyof typeof t.skills.categories)[];
 
   return (
-    <section id="skills" className="py-28">
+    <section
+      id="skills"
+      className="
+        py-28
+        bg-white text-black
+        dark:bg-[#0a0f1f] dark:text-white
+        transition-colors duration-300
+      "
+    >
       <MotionFade>
 
         {/* TITLE */}
-        <h2 className="text-4xl font-bold text-center mb-16 text-white tracking-wide">
+        <h2
+          className="
+            text-4xl font-bold text-center mb-16 tracking-wide
+            text-black dark:text-white
+          "
+        >
           {t.skills.title}
         </h2>
 
@@ -23,12 +36,21 @@ export default function Skills() {
           {categories.map((key) => (
             <div
               key={key}
-              className="p-6 rounded-2xl bg-white/5 border border-white/10 
-                         backdrop-blur-md hover:bg-white/10 transition"
+              className="
+                p-6 rounded-2xl transition backdrop-blur-md
+
+                /* LIGHT */
+                bg-black/5 border border-black/10
+                hover:bg-black/10
+
+                /* DARK */
+                dark:bg-white/5 dark:border-white/10
+                dark:hover:bg-white/10
+              "
             >
 
               {/* CATEGORY TITLE */}
-              <h3 className="text-2xl font-semibold text-white mb-5">
+              <h3 className="text-2xl font-semibold mb-5 text-black dark:text-white">
                 {t.skills.categories[key]}
               </h3>
 
@@ -37,9 +59,17 @@ export default function Skills() {
                 {t.skills.list[key].map((item: string) => (
                   <span
                     key={item}
-                    className="px-5 py-2 text-base bg-white/10 text-white/80 
-                               rounded-lg border border-white/20
-                               hover:bg-white/20 transition tracking-wide"
+                    className="
+                      px-5 py-2 text-base rounded-lg tracking-wide transition
+
+                      /* LIGHT */
+                      bg-black/5 text-black/80 border border-black/20
+                      hover:bg-black/10 hover:border-black/30
+
+                      /* DARK */
+                      dark:bg-white/10 dark:text-white/80 dark:border-white/20
+                      dark:hover:bg-white/20 dark:hover:border-white/40
+                    "
                   >
                     {item}
                   </span>
