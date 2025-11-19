@@ -83,7 +83,7 @@ Hiện tại, tôi đang mở rộng kỹ năng bằng việc xây dựng trợ 
           "RAG",
         ],
         link: "https://www.food-map.online/",
-        image: "/assets/foodmap.png",
+        image: "assets/foodmap.png",
       },
 
       {
@@ -91,7 +91,7 @@ Hiện tại, tôi đang mở rộng kỹ năng bằng việc xây dựng trợ 
         desc: "Giao diện e-commerce responsive với danh mục sản phẩm, danh sách sản phẩm và tối ưu trải nghiệm mobile.",
         tech: ["HTML", "CSS", "JavaScript"],
         link: "https://giahao1609.github.io/hoanggiahao-21121381/",
-        image: "/assets/ecommerce.png",
+        image: "assets/ecommerce.png",
       },
     ],
   },

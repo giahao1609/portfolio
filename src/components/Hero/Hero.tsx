@@ -9,13 +9,15 @@ export default function Hero() {
       id="home"
       className="py-36 px-6 md:px-16 bg-linear-to-br from-[#071123] via-[#0b1b33] to-[#081423] text-white"
     >
-      <div className="
+      <div
+        className="
         max-w-6xl 
         mx-auto 
         grid grid-cols-1 md:grid-cols-2 
         gap-20 
         items-center
-      ">
+      "
+      >
 
         {/* LEFT */}
         <MotionFade>
@@ -40,7 +42,7 @@ export default function Hero() {
             {/* BUTTONS */}
             <div className="flex gap-6">
               <a
-                href="/cv.pdf"
+                href={import.meta.env.BASE_URL + "cv.pdf"}
                 className="px-7 py-3.5 bg-white/10 hover:bg-white/20 rounded-xl transition text-white text-lg"
               >
                 {t.hero.downloadCV}
@@ -63,7 +65,7 @@ export default function Hero() {
               <div className="absolute -inset-10 bg-purple-600/30 blur-[100px] rounded-3xl"></div>
 
               <img
-                src="./profile.jpg"
+                src={import.meta.env.BASE_URL + "profile.jpg"}
                 className="
                   relative 
                   w-[260px] h-[340px]

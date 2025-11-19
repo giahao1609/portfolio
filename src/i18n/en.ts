@@ -14,7 +14,8 @@ export default {
     name: "Hoang Gia Hao",
     title: "Software Developer — Web & AI Integration",
 
-    shortDescription: "Building full-stack applications with modern UI, geolocation, and AI features.",
+    shortDescription:
+      "Building full-stack applications with modern UI, geolocation, and AI features.",
 
     description:
       "Motivated Software Developer with hands-on experience building full-stack applications using React, TypeScript, Node.js, and MongoDB. I developed a real-world FoodMap platform integrating geolocation search, restaurant management workflows, AI chatbot assistance (Live2D + RAG), and image processing capabilities. I have experience designing scalable REST APIs, implementing secure authentication and authorization flows, and building backend services with NestJS following clean architecture principles. I focus on clean, maintainable, and efficient code. I am currently expanding my expertise through developing an interactive Live2D AI assistant that brings natural, human-like communication to users.",
@@ -77,7 +78,7 @@ export default {
           "RAG",
         ],
         link: "https://www.food-map.online/",
-        image: "/assets/foodmap.png",
+        image: "assets/foodmap.png", 
       },
 
       {
@@ -85,27 +86,26 @@ export default {
         desc: "Responsive e-commerce front-end with category navigation, product lists, and mobile-optimized UI/UX.",
         tech: ["HTML", "CSS", "JavaScript"],
         link: "https://giahao1609.github.io/hoanggiahao-21121381/",
-        image: "/assets/ecommerce.png",
+        image: "assets/ecommerce.png", 
       },
     ],
   },
 
   contact: {
-  title: "Contact",
-  desc: "If you have any questions, feel free to send me a message!",
+    title: "Contact",
+    desc: "If you have any questions, feel free to send me a message!",
 
-  form: {
-    fullname: "Full Name",
-    fullname_placeholder: "Enter your name...",
-    email: "Email",
-    email_placeholder: "Enter your email...",
-    message: "Message",
-    message_placeholder: "Enter your message...",
-    submit: "Send Message",
+    form: {
+      fullname: "Full Name",
+      fullname_placeholder: "Enter your name...",
+      email: "Email",
+      email_placeholder: "Enter your email...",
+      message: "Message",
+      message_placeholder: "Enter your message...",
+      submit: "Send Message",
+    },
+
+    info_title: "Contact Information",
+    location: "Ho Chi Minh City",
   },
-
-  info_title: "Contact Information",
-  location: "Ho Chi Minh City"
-}
-,
 };
